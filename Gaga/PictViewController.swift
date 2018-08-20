@@ -36,22 +36,22 @@ class PictViewController: UIViewController {
         let filePath = documentsURL.appendingPathComponent(pictureName).path
         guard let image = UIImage(contentsOfFile: filePath) else { return }
         self.imageView.image = image
-      }
-      let session = URLSession(configuration: .default)
-      let task = session.dataTask(with: url) { data, response, error in
-        guard error == nil else { return }
-        guard let safeData = data else { return }
-        let image = UIImage(data: safeData)
-        self.saveImage(safeData, lItem.picture!)
-        DispatchQueue.main.async {
-          self.imageView.image = image
-          self.a_i.stopAnimating()
+      } else {
+        let session = URLSession(configuration: .default)
+        let task = session.dataTask(with: url) { data, response, error in
+          guard error == nil else { return }
+          guard let safeData = data else { return }
+          let image = UIImage(data: safeData)
+          self.saveImage(safeData, lItem.picture!)
+          DispatchQueue.main.async {
+            self.imageView.image = image
+            self.a_i.stopAnimating()
+          }
         }
+        a_i.startAnimating()
+        task.resume()
       }
-      a_i.startAnimating()
-      task.resume()
     }
-    
   }
   
   private func photoIsDownloaded(name: String) -> Bool {

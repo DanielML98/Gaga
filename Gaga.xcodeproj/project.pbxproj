@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E228583283871B3001B432F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E228582283871B3001B432F /* LoginViewController.swift */; };
 		3E99889628383E1600FC0E5A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E99889528383E1600FC0E5A /* AppDelegate.swift */; };
 		3E99889828383E1600FC0E5A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E99889728383E1600FC0E5A /* SceneDelegate.swift */; };
 		3E99889A28383E1600FC0E5A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E99889928383E1600FC0E5A /* ViewController.swift */; };
@@ -15,9 +16,12 @@
 		3E9988A228383E1600FC0E5A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E9988A028383E1600FC0E5A /* LaunchScreen.storyboard */; };
 		3E9988AA28383E2500FC0E5A /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E9988A928383E2500FC0E5A /* DataManager.swift */; };
 		3E9988AC28384F6700FC0E5A /* PictViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E9988AB28384F6700FC0E5A /* PictViewController.swift */; };
+		3EC078B428392C6D001F7F1C /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 3EC078B328392C6D001F7F1C /* FirebaseAuth */; };
+		3EC078B628392CF0001F7F1C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3EC078B528392CF0001F7F1C /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3E228582283871B3001B432F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		3E99889228383E1600FC0E5A /* Gaga.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gaga.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E99889528383E1600FC0E5A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3E99889728383E1600FC0E5A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -28,6 +32,7 @@
 		3E9988A328383E1600FC0E5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3E9988A928383E2500FC0E5A /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		3E9988AB28384F6700FC0E5A /* PictViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictViewController.swift; sourceTree = "<group>"; };
+		3EC078B528392CF0001F7F1C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3EC078B428392C6D001F7F1C /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,10 +71,12 @@
 				3E99889928383E1600FC0E5A /* ViewController.swift */,
 				3E9988A928383E2500FC0E5A /* DataManager.swift */,
 				3E9988AB28384F6700FC0E5A /* PictViewController.swift */,
+				3E228582283871B3001B432F /* LoginViewController.swift */,
 				3E99889B28383E1600FC0E5A /* Main.storyboard */,
 				3E99889E28383E1600FC0E5A /* Assets.xcassets */,
 				3E9988A028383E1600FC0E5A /* LaunchScreen.storyboard */,
 				3E9988A328383E1600FC0E5A /* Info.plist */,
+				3EC078B528392CF0001F7F1C /* GoogleService-Info.plist */,
 			);
 			path = Gaga;
 			sourceTree = "<group>";
@@ -89,6 +97,9 @@
 			dependencies = (
 			);
 			name = Gaga;
+			packageProductDependencies = (
+				3EC078B328392C6D001F7F1C /* FirebaseAuth */,
+			);
 			productName = Gaga;
 			productReference = 3E99889228383E1600FC0E5A /* Gaga.app */;
 			productType = "com.apple.product-type.application";
@@ -117,6 +128,9 @@
 				Base,
 			);
 			mainGroup = 3E99888928383E1600FC0E5A;
+			packageReferences = (
+				3EC078B228392C6D001F7F1C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 3E99889328383E1600FC0E5A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -132,6 +146,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3E9988A228383E1600FC0E5A /* LaunchScreen.storyboard in Resources */,
+				3EC078B628392CF0001F7F1C /* GoogleService-Info.plist in Resources */,
 				3E99889F28383E1600FC0E5A /* Assets.xcassets in Resources */,
 				3E99889D28383E1600FC0E5A /* Main.storyboard in Resources */,
 			);
@@ -144,6 +159,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E228583283871B3001B432F /* LoginViewController.swift in Sources */,
 				3E9988AC28384F6700FC0E5A /* PictViewController.swift in Sources */,
 				3E99889A28383E1600FC0E5A /* ViewController.swift in Sources */,
 				3E9988AA28383E2500FC0E5A /* DataManager.swift in Sources */,
@@ -368,6 +384,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3EC078B228392C6D001F7F1C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3EC078B328392C6D001F7F1C /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3EC078B228392C6D001F7F1C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3E99888A28383E1600FC0E5A /* Project object */;
 }
